@@ -1,0 +1,23 @@
+spring:
+ datasource:
+     driverClassName: org.postgresql.Driver
+     url: jdbc:postgresql://localhost:5432/patos
+     username: postgres
+     password: postgres
+ jpa: # JPA
+    database_platform: org.hibernate.dialect.PostgreSQLDialect
+    openInView: true
+    show-sql: false
+    database: POSTGRESQL
+    hibernate.ddl-auto: update
+ view:
+    prefix: /WEB-INF/jsp/
+    suffix: .jsp
+error:
+  whitelabel:
+    enabled: true
+
+logging:
+  level:
+    org.springframework.web: ERROR
+    org.hibernate: ERROR

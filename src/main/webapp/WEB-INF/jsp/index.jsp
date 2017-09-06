@@ -9,6 +9,35 @@
         <jsp:param name="title" value="News feed"/>
     </jsp:include>
     <link type="text/css" href="/resources/components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: arial;
+        }
+
+        #container {
+            margin-bottom: 5px;
+            overflow: hidden;
+            border: 2px solid silver;
+            border-radius: 6px;
+            background: white;
+        }
+
+        .zoom-button {
+            width: 30px;
+            height: 30px;
+            border-radius: 4px;
+            border: none;
+            background: silver;
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+        }
+
+        #zoom-info {
+            display: inline-block;
+            padding: 10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -30,7 +59,7 @@
         },
         setProjection: function(element) {
             var projection = d3.geo.equirectangular()
-                .center([42.7, 0])
+                .center([42.7, 0.3])
                 .rotate([4.4, 0])
                 .scale(4500)
                 .translate([element.offsetWidth / 2, element.offsetHeight / 2]);
